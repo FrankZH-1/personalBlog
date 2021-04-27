@@ -1,19 +1,16 @@
-var Trie = function () {
-	this.index = [];
-};
-
-Trie.prototype.insert = function (word) {
-	if (word.length) {
-		var wordArr = word.split('');
-		var val = wordArr.shift();
-		var newWord = wordArr.join('');
-		if (this.index.indexOf(val)!=-1) {
-			this.index.push(val);
-			this.index[this.index.indexOf(val)] = new Trie();
-			console.log(this.index[this.index.indexOf(val)]);
+var nums = [3, 2, 2, 3];
+var removeElement = function (nums, val) {
+	var move = function (index, arr) {
+		for (let i = index; i < arr.length; i++)
+			arr[i] = arr[i + 1];
+	}
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] === val) {
+			move(i, nums);
+			i--;
 		}
 	}
+	return nums;
 };
 
-var Trie = new Trie();
-Trie.insert('hello');
+console.log(removeElement(nums, 3));

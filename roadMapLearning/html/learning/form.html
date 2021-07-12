@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang = "zh-CN">
+	<meta charset="utf-8">
+	<title>表单</title>
+<body>
+	<form>
+		用户名：
+		<input type="text" name="" value="" pattern=".{3,5}" title="请输入匹配格式！"/>
+		<!-- html5新属性pattern：自带的格式验证 -->
+		<!-- .{3,5}为正则表达式 -->
+		<br/>
+		复选框：
+		"选项1"<input type="checkbox" name="" value="" />
+		"选项2"<input type="checkbox" name="" value="" />
+		"选项3"<input type="checkbox" name="" value="" />
+		<br/>
+		单选按钮：
+		"选项1"<input type="radio" name="type1" />
+		"选项2"<input type="radio" name="type1" />
+		<br/>
+		下拉列表
+		<select>
+			<option>选项1</option>
+			<option>选项2</option>
+			<option>选项3</option>
+		</select>
+		<br/>
+		按钮
+		<input type="button" name="" value="0" />
+		(提交按钮)
+		<input type="submit" name="" value="confirm" />
+		<br/>
+	</form>
+	文本域
+	<textarea cols="30" rows="30">输入提示</textarea>
+</body>
